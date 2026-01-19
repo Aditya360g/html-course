@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+        }
+        .info-box, .form-box {
+            flex: 1;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .info {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .info i {
+            margin-right: 10px;
+            color: #4CAF50;
+        }
+        .social {
+            margin-top: 20px;
+        }
+        .social i {
+            font-size: 24px;
+            margin-right: 15px;
+            color: #333;
+            cursor: pointer;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+        .input-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .input-box .icon {
+            padding: 10px;
+            background: #f0f0f0;
+        }
+        .input-box .icon i {
+            color: #666;
+        }
+        .input-box input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+        select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="info-box">
+           <h1>Contact Information</h1>
+            <div class="info"><i class="fas fa-map-marker-alt"></i>Dr. NAVANIIT NARAYANDAS MANDHAANI, Office, Atharva Feryez Plaza,<br>213, Pune - Satara Rd, opposite Shankar Math, Sambhagi Nagar,<br> Dhankawadi, Pune, Maharashtra 411028 </div>
+            <div class="info"><i class="fas fa-phone"></i>+91 -9158096524</div>
+            <div class="info"><i class="fas fa-envelope"></i>Numerology@gmail.com</div>
+            <div class="social">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+
+        <div class="form-box">
+            <label>Name</label>
+            <div class="input-box">
+                <div class="icon"><i class="fas fa-user"></i></div>
+                <input type="text" placeholder="Full Name">
+            </div>
+
+            <label>Mobile Number</label>
+            <div class="input-box">
+                <div class="icon"><i class="fas fa-phone"></i></div>
+                <input type="tel" placeholder="Mobile Number" pattern="[0-9]{10}" maxlength="10" name="mobile" required oninput="this.value = this.value.replace(/[^0-9]/g,'')">
+            </div>
+
+            <label>Email</label>
+            <div class="input-box">
+                <div class="icon"><i class="fas fa-envelope"></i></div>
+                <input type="email" placeholder="Enter Email address" pattern=".*\.com">
+            </div>
+
+            <label>Select a service</label>
+            <select>
+                <option value="">Please select</option>
+                <option value="numerology">Numerology</option>
+                <option value="consultation">Consultation</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label>Message</label>
+            <textarea placeholder="Your message"></textarea>
+             
+            <button>Submit</button>
+        </div>
+    </div>
+</body>
+</html>
